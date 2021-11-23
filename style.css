@@ -1,0 +1,134 @@
+:root {
+  --label: hsl(213, 81%, 39%);
+  --text-color:hsl(100, 0%, 100%);
+
+  --selected-label: hsl(100, 0%, 100%);
+  --selected-text-color:hsl(249, 58%, 19%);
+  
+  --border-shadow:rgb(8, 48, 106);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: white;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #0a1c57, #6b85d8, #1b3380, #3b5dd8);
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div{
+  padding: 10px;
+}
+.container {
+  padding: 15px;
+  /* margin-top: 20vh; */
+  background: linear-gradient(-45deg, #90a9c1, #a8cce6, #82b0eb, #93a9ff);
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+}
+.input-part,
+.people,
+.calculation-part {
+  padding: 15px;
+  
+}
+
+
+input[type="radio"] {
+  display: none;
+}
+
+
+.flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"]:checked + label {
+  background: var(--selected-label);
+  box-shadow: 0px 0px 20px var(--border-shadow);
+  color:var(--selected-text-color)
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  color:var(--text-color);
+  cursor: pointer;
+  background: var(--label);
+  min-width: 140px;
+  padding: 0.5rem;
+  margin: 1px;
+  font-size: 1rem;
+}
+.heading-part{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(22, 94, 201);
+}
+.question-cost{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input[type="number"]{
+  width: 240px;
+  font-size: large;
+  font-weight:bolder ;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+}
+input[type="number"]:focus{
+  outline: none;  
+}
+p{
+  display: flex;
+
+  justify-content: center;
+}
+button{
+  width: 240px;
+  color: hsl(100, 0%, 100%);
+  font-size: x-large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  border-radius: 10px;
+  background-color: rgb(22, 94, 201); ;
+}
+button:hover{
+  background-color:hsl(100, 0%, 100%);
+  cursor: pointer;
+  color:var(--selected-text-color);
+  box-shadow: 0px 0px 20px var(--border-shadow);
+}
+.people{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

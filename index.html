@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.JS"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading-part">TIP CALCULATOR</div>
+      <div class="input-part flex flex-column center">
+        <div class="question-cost">
+          <p class="questions">Bill Amount to be paid :-</p>
+          <input type="number" class="answers" id="answer-cost" />
+        </div>
+        <div>
+          <p class="questions" id="question-service">How was the service ?</p>
+          <div class="flex center radio-container" id="answer-service">
+            <div class="flex flex-column center">
+              <input
+                type="radio"
+                class="radio-btn"
+                id="radio1"
+                name="radiobutton"
+                value="5"
+                checked
+              />
+              <label for="radio1" class="label">Poor (5%)</label>
+            </div>
+            <div class="flex flex-column center">
+              <input
+                type="radio"
+                class="radio-btn"
+                id="radio2"
+                name="radiobutton"
+                value="10"
+              />
+              <label for="radio2" class="label">Good (10%)</label>
+            </div>
+            <div class="flex flex-column center">
+              <input
+                type="radio"
+                class="radio-btn"
+                id="radio3"
+                name="radiobutton"
+                value="20"
+              />
+              <label for="radio3" class="label">Better (20%)</label>
+            </div>
+            <div class="flex flex-column center">
+              <input
+                type="radio"
+                class="radio-btn"
+                id="radio4"
+                name="radiobutton"
+                value="30"
+              />
+              <label for="radio4" class="label">Outstanding (30%)</label>
+            </div>
+          </div>
+        </div>
+        <div class="people">
+          <p class="questions" id="question-people">
+            How many people are sharing the bill ?
+          </p>
+          <input type="number" class="answers" id="answer-people" value="1" min="1" max="100">
+        </div>
+      </div>
+      <div class="calculation-part">
+        <button onclick="calculate()">Calculate</button>
+        <p><span class="tip">Tip Per Person :<p id="tipDom"></p></span></p>
+        <p><span class="total">Total Tip Amount :<p id="totalTipDom"></p></span></p>
+        <p><span class="total">Total Bill Amount :<p id="totalDom"></p></span></p>
+      </div>
+    </div>
+  </body>
+</html>
